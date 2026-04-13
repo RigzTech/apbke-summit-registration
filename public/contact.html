@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Partnership | 5TH EAST AFRICAN BROADCASTERS CONVENTION 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: white; margin: 0;">
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="top-bar-info">
+    <a href="tel:+254722360882">📞 +254 722 360 882</a>
+    <a href="mailto:info@apbke.org">📧 info@apbke.org</a>
+  </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <a class="nav-logo-text" href="/">
+    <img src="/images/APB_LOGO.png" alt="APB Logo" class="logo-img">
+  </a>
+  <div class="menu-toggle" id="mobile-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/register.html">Register</a></li>
+    <li><a href="/sponsorship.html">Sponsorship</a></li>
+    <li><a href="/contact.html" class="active">Contact</a></li>
+    <li><a href="https://apbke.org" target="_blank" class="btn-secondary" style="padding: 10px 24px; border: 1px solid var(--royal-blue); color: var(--royal-blue);">Main Website</a></li>
+    <li><a href="/register.html" class="btn-primary" style="padding: 10px 24px;">Get Pass</a></li>
+  </ul>
+</nav>
+
+  <!-- ELITE CONTACT SECTION -->
+  <div class="contact-elite-wrapper">
+    <div class="contact-elite-container">
+      
+      <!-- Left Editorial -->
+      <div class="contact-elite-text">
+        <h1>Partnership<br><span>Elevated.</span></h1>
+        <p>Whether you're securing an exclusive convention sponsorship or exploring bespoke integration opportunities, our executive team is ready to assist you.</p>
+        
+        <div class="contact-info-pills">
+          <div class="info-pill">
+            <div class="info-pill-icon">📍</div>
+            <div class="info-pill-text">Nairobi, Kenya</div>
+          </div>
+          <div class="info-pill">
+            <div class="info-pill-icon">📞</div>
+            <div class="info-pill-text">+254 722 360 882</div>
+          </div>
+          <div class="info-pill">
+            <div class="info-pill-icon">✉️</div>
+            <div class="info-pill-text">info@apbke.org</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Form Array -->
+      <div class="contact-elite-form" id="contactFormContainer">
+        <form id="contactForm">
+          <input type="hidden" id="tier" name="tier" value="">
+
+          <div class="form-elite-row">
+            <div class="form-elite-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" class="form-elite-input" placeholder="E.g. Jane Doe" required>
+            </div>
+            <div class="form-elite-group">
+              <label for="organization">Organization</label>
+              <input type="text" id="organization" name="organization" class="form-elite-input" placeholder="Company Name" required>
+            </div>
+          </div>
+
+          <div class="form-elite-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" class="form-elite-input" placeholder="jane@corporate.com" required>
+          </div>
+
+          <div class="form-elite-group">
+            <label for="subject">Area of Interest</label>
+            <select id="subject" name="subject" class="form-elite-input" required>
+              <option value="" disabled selected>Select an option...</option>
+              <option value="Bronze Partnership">Bronze Partnership (KSh 500k)</option>
+              <option value="Silver Partnership">Silver Partnership (KSh 1M)</option>
+              <option value="Gold Partnership">Gold Partnership (KSh 2M)</option>
+              <option value="Platinum Partnership">Platinum Partnership (KSh 3M)</option>
+              <option value="Bespoke Partnership">Bespoke Partnership Options</option>
+              <option value="General Inquiry">General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-elite-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-elite-input" placeholder="How can we partner with you?" required></textarea>
+          </div>
+
+          <div id="contactErrorMessage" class="error-msg" style="display: none; padding: 12px; margin-bottom: 24px; border-radius: 12px; background: #FEF2F2; color: #EF4444; border: 1px solid #FCA5A5;"></div>
+
+          <button type="submit" class="btn-elite-submit" id="submitContactBtn">Send Inquiry →</button>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div class="contact-elite-form" id="contactSuccessContainer" style="display: none;">
+        <div class="success-icon-elite">✓</div>
+        <h2 style="font-size: 2.5rem; color: var(--navy); margin-bottom: 16px;">Inquiry Sent</h2>
+        <p style="color: #64748b; font-size: 1.1rem; line-height: 1.6; margin-bottom: 32px;">
+          Thank you for reaching out. Your message has been dispatched to our administrative team via our secure portal. We will be in touch shortly.
+        </p>
+        <a href="index.html" class="btn-elite-submit" style="display: inline-block; text-decoration: none; text-align: center;">Return to Homepage</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delegate Registration | 5th East African Broadcasters Convention</title>
+  <meta name="description" content="Complete your delegate registration for the 5th East African Broadcasters Convention.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .form-step { display: none; animation: fadeIn 0.4s ease-out; }
+    .form-step.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    
+    .summary-card { background: var(--slate-50); padding: 32px; border-radius: 16px; border: 1px solid var(--border-light); margin-bottom: 32px; }
+    .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .summary-item { display: flex; flex-direction: column; gap: 4px; }
+    .summary-label { font-weight: 700; color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .summary-value { font-weight: 600; color: var(--navy); font-size: 1rem; }
+    
+    .total-summary { border-top: 1px solid var(--border-subtle); margin-top: 24px; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .total-summary .label { font-weight: 800; font-size: 1.1rem; color: var(--navy); }
+    .total-summary .value { font-weight: 900; font-size: 1.6rem; color: var(--blue); }
+
+    .payment-instruction-box { background: #fff; border: 1px solid var(--border-light); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+    .confirmation-input-box { border-top: 1px solid var(--border-subtle); margin-top: 20px; padding-top: 20px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo-text" href="/">
+    <img src="/images/APB_LOGO.png" alt="APB Logo" class="logo-img">
+  </a>
+  <div class="menu-toggle" id="mobile-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/register.html">Register</a></li>
+    <li><a href="/sponsorship.html">Sponsorship</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="https://apbke.org" target="_blank" class="btn-secondary" style="padding: 10px 24px; border: 1px solid var(--royal-blue); color: var(--royal-blue);">Main Website</a></li>
+    <li><a href="/register.html" class="btn-primary" style="padding: 10px 24px;">Get Pass</a></li>
+  </ul>
+</nav>
+
+<main class="form-page">
+  <div class="container">
+    <div style="text-align: center; margin: 60px 0;">
+      <h1 style="font-size: 2.8rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; font-family: 'Outfit', sans-serif;">Delegate Registration</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem;">Secure your spot at the summit</p>
+    </div>
+
+    <div class="form-card">
+        <div class="stepper">
+          <div class="step-item active" id="step-1">
+            <div class="step-circle">1</div>
+            <span class="step-label">Details</span>
+          </div>
+          <div class="stepper-line"></div>
+          <div class="step-item" id="step-2">
+            <div class="step-circle">2</div>
+            <span class="step-label">Review</span>
+          </div>
+          <div class="stepper-line"></div>
+          <div class="step-item" id="step-3">
+            <div class="step-circle">3</div>
+            <span class="step-label">Payment</span>
+          </div>
+        </div>
+
+        <!-- STEP 1: General Details -->
+        <div class="form-step active" id="form-step-1">
+            <!-- Kenyan Attendance -->
+            <div id="standard-attendance-section" style="display: none; margin-bottom: 32px;">
+                <div class="form-section-header">
+                    <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                    <h3>1. Category</h3>
+                </div>
+                <div style="background: var(--slate-50); padding: 24px; border-radius: 12px; border: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div id="pass-title-main" style="font-weight: 800; color: var(--navy); font-size: 1.1rem;">Conference Pass</div>
+                        <div id="pass-subtitle-main" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Standard Registration</div>
+                    </div>
+                    <div id="pass-price-main" style="font-weight: 900; font-size: 1.4rem; color: var(--royal-blue);">—</div>
+                </div>
+            </div>
+
+            <!-- EA Attendance -->
+            <div id="multi-attendance-section" style="display: none; margin-bottom: 32px;">
+                <div class="form-section-header">
+                    <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                    <h3>1. Select Passes</h3>
+                </div>
+                <div style="background: white; border: 1px solid var(--border-light); border-radius: 12px; padding: 20px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: 800; color: var(--navy);">Conference Pass (Physical)</div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">USD 295.00</div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; background: #f8fafc; padding: 8px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                        <button type="button" id="btn-p-minus" style="padding: 4px 10px; cursor: pointer;">-</button>
+                        <span id="qty-physical" style="font-weight: 800; min-width: 20px; text-align: center;">1</span>
+                        <button type="button" id="btn-p-plus" style="padding: 4px 10px; cursor: pointer;">+</button>
+                    </div>
+                </div>
+                <div style="background: white; border: 1px solid var(--border-light); border-radius: 12px; padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: 800; color: var(--navy);">Virtual Attendance</div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">USD 145.00</div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; background: #f8fafc; padding: 8px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                        <button type="button" id="btn-v-minus" style="padding: 4px 10px; cursor: pointer;">-</button>
+                        <span id="qty-virtual" style="font-weight: 800; min-width: 20px; text-align: center;">0</span>
+                        <button type="button" id="btn-v-plus" style="padding: 4px 10px; cursor: pointer;">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section active">
+              <div class="form-section-header">
+                <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                <h3>2. Bio Information</h3>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label>First Name <span class="required-star">*</span></label><input type="text" id="firstName" required></div>
+                <div class="form-group"><label>Last Name <span class="required-star">*</span></label><input type="text" id="lastName" required></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label>Email <span class="required-star">*</span></label><input type="email" id="email" required></div>
+                <div class="form-group"><label>Phone <span class="required-star">*</span></label><input type="tel" id="phone" required></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label>Organization <span class="required-star">*</span></label><input type="text" id="organization" required></div>
+                <div class="form-group"><label>Job Title <span class="required-star">*</span></label><input type="text" id="jobTitle" required></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label>Gender <span class="required-star">*</span></label>
+                  <select id="gender" required><option value="">Select</option><option>Male</option><option>Female</option></select>
+                </div>
+                <div class="form-group"><label>Country <span class="required-star">*</span></label>
+                  <select id="countryRes" required>
+                    <option value="">Select</option>
+                    <option>Kenya</option><option>Tanzania</option><option>Uganda</option><option>Rwanda</option><option>Burundi</option><option>South Sudan</option><option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label id="county-label">County <span class="required-star">*</span></label>
+                  <select id="county" required>
+                    <option value="">Select County</option>
+                    <option value="Baringo">Baringo</option><option value="Bomet">Bomet</option><option value="Bungoma">Bungoma</option><option value="Busia">Busia</option><option value="Elgeyo Marakwet">Elgeyo Marakwet</option><option value="Embu">Embu</option><option value="Garissa">Garissa</option><option value="Homa Bay">Homa Bay</option><option value="Isiolo">Isiolo</option><option value="Kajiado">Kajiado</option><option value="Kakamega">Kakamega</option><option value="Kericho">Kericho</option><option value="Kiambu">Kiambu</option><option value="Kilifi">Kilifi</option><option value="Kirinyaga">Kirinyaga</option><option value="Kisii">Kisii</option><option value="Kisumu">Kisumu</option><option value="Kitui">Kitui</option><option value="Kwale">Kwale</option><option value="Laikipia">Laikipia</option><option value="Lamu">Lamu</option><option value="Machakos">Machakos</option><option value="Makueni">Makueni</option><option value="Mandera">Mandera</option><option value="Marsabit">Marsabit</option><option value="Meru">Meru</option><option value="Migori">Migori</option><option value="Murang'a">Murang'a</option><option value="Nairobi">Nairobi</option><option value="Nakuru">Nakuru</option><option value="Nandi">Nandi</option><option value="Narok">Narok</option><option value="Nyamira">Nyamira</option><option value="Nyandarua">Nyandarua</option><option value="Nyeri">Nyeri</option><option value="Samburu">Samburu</option><option value="Siaya">Siaya</option><option value="Taita Taveta">Taita Taveta</option><option value="Tana River">Tana River</option><option value="Tharaka Nithi">Tharaka Nithi</option><option value="Trans Nzoia">Trans Nzoia</option><option value="Turkana">Turkana</option><option value="Uasin Gishu">Uasin Gishu</option><option value="Vihiga">Vihiga</option><option value="Wajir">Wajir</option><option value="West Pokot">West Pokot</option>
+                  </select>
+                  <input type="text" id="cityRegion" placeholder="City / State" style="display:none;">
+                </div>
+                <div class="form-group"><label>Age Range <span class="required-star">*</span></label>
+                  <select id="ageRange" required><option value="">Select</option><option>18-34</option><option>35-50</option><option>50+</option></select>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- STEP 2: Review -->
+        <div class="form-step" id="form-step-2">
+          <div class="form-section-header" style="justify-content: center; margin-bottom: 24px;"><h3>Review Your Details</h3></div>
+          <div class="summary-card">
+            <div class="summary-grid">
+              <div class="summary-item"><span class="summary-label">Full Name</span><span class="summary-value" id="v-name">—</span></div>
+              <div class="summary-item"><span class="summary-label">Email Address</span><span class="summary-value" id="v-email-val">—</span></div>
+              <div class="summary-item"><span class="summary-label">Phone Number</span><span class="summary-value" id="v-phone">—</span></div>
+              <div class="summary-item"><span class="summary-label">Organization</span><span class="summary-value" id="v-org">—</span></div>
+              <div class="summary-item"><span class="summary-label">Job Title</span><span class="summary-value" id="v-job">—</span></div>
+              <div class="summary-item"><span class="summary-label">Gender</span><span class="summary-value" id="v-gender">—</span></div>
+              <div class="summary-item"><span class="summary-label">Location</span><span class="summary-value" id="v-county">—</span></div>
+              <div class="summary-item"><span class="summary-label">Age Range</span><span class="summary-value" id="v-age">—</span></div>
+              <div class="summary-item"><span class="summary-label">Pass Category</span><span class="summary-value" id="summaryPassType">—</span></div>
+              <div class="summary-item"><span class="summary-label">Attendance</span><span class="summary-value" id="summaryPassCategory">—</span></div>
+            </div>
+            <div class="total-summary">
+                <span class="label">Total Amount</span>
+                <span class="value" id="summaryTotal">—</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: Payment -->
+        <div class="form-step" id="form-step-3">
+            <div class="form-section-header">
+              <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></div>
+              <h3 id="payment-step-title">3. Complete Payment</h3>
+            </div>
+
+            <!-- KENYA: MPESA SECTION -->
+            <div id="mpesa-section" style="display:none;">
+               <div class="payment-instruction-box">
+                  <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                    <img src="/images/mpesa.png" alt="M-Pesa" style="height: 32px;">
+                    <span style="font-weight: 800; color: var(--navy);">M-Pesa Payment</span>
+                  </div>
+                  <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px;">
+                    <strong>Primary Method:</strong> STK Push (You will receive a prompt on your phone).<br>
+                    <strong>Alternative:</strong> Use M-Pesa Paybill <strong>972700</strong>, Account Number: <strong><span class="reg-id-display">Registration ID</span></strong>.
+                  </p>
+                  <div class="form-group">
+                    <label>M-Pesa Phone Number</label>
+                    <input type="tel" id="mpesaPhone" placeholder="07XXXXXXXX">
+                  </div>
+                  <div style="background:#f1f5f9; padding:16px 24px; border-radius:12px; margin-bottom:24px; display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-weight:700; color:var(--text-muted); text-transform:uppercase; font-size:0.8rem;">Total to Pay</span>
+                    <span class="value" id="mpesa-total" style="font-weight:900; font-size:1.4rem; color:var(--royal-blue);">KES 0</span>
+                  </div>
+                  <button class="btn-cta-premium" id="btn-pay" style="width: 100%;">Launch Payment Prompt</button>
+               </div>
+               
+               <!-- POST-PAYMENT VERIFICATION -->
+               <div id="mpesa-confirmation-section" style="display:none; border: 2px dashed var(--blue); padding: 24px; border-radius: 12px; background: #f0f7ff;">
+                  <h4 style="margin-bottom: 8px;">Verification Required</h4>
+                  <p style="font-size: 0.85rem; margin-bottom: 16px;">Once you receive the M-Pesa SMS, enter the Transaction Code below.</p>
+                  <div class="form-group">
+                    <label>Transaction Code (e.g. SCN7Q8...)</label>
+                    <input type="text" id="mpesaTransactionCode" placeholder="Enter M-Pesa Code">
+                  </div>
+                  <button class="btn-primary" id="btn-mpesa-confirm" style="width: 100%;">Complete Registration &nbsp;✅</button>
+               </div>
+            </div>
+
+            <div id="bank-section" style="display:none;">
+                <div class="payment-instruction-box">
+                  <div style="font-weight: 800; color: var(--navy); margin-bottom: 16px;">🏦 Bank Transfer Details</div>
+                  <div style="background: var(--slate-50); border: 1px solid var(--border-light); padding: 20px; border-radius: 12px; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.8;">
+                    <div style="display: grid; grid-template-columns: 140px 1fr; gap: 8px;">
+                        <strong>Account Name:</strong> <span>ASSOCIATION OF PROFESSIONAL BROACASTERS</span>
+                        <strong>Bank Name:</strong> <span>Credit Bank PLC (Bank Code: 025)</span>
+                        <strong>Branch:</strong> <span>LAVINGTON BRANCH (Code: 013)</span>
+                        <strong>Swift Code:</strong> <span>CRBTKENA</span>
+                        <strong>Account (KES):</strong> <span>0131016000003</span>
+                        <strong>Account (USD):</strong> <span>0131016000017</span>
+                        <strong>Account (EUR):</strong> <span>0131016000018</span>
+                        <strong>Account (GBP):</strong> <span>0131016000019</span>
+                        <strong>Reference:</strong> <span id="bank-reference" style="color: var(--blue); font-weight: 800; background: #fff; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border-subtle);">REG-XXXX</span>
+                    </div>
+                  </div>
+                  <div id="intermediary-details" style="display:none; font-size: 0.8rem; background: #fffdf0; border: 1px solid #ffeeba; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                    <h5 style="margin-top: 0; color: #856404;">🌍 Intermediary Bank Details (International Transfers)</h5>
+                    <p style="margin-bottom: 5px;"><strong>USD:</strong> Standard Chartered Bank (SCBLUS33), A/C: 3582054451001</p>
+                    <p style="margin-bottom: 5px;"><strong>EUR:</strong> Standard Chartered Bank (SCBLDEFX), IBAN: DE39512305000050008709</p>
+                    <p><strong>GBP:</strong> Standard Chartered Bank (SCBLGB2L), A/C: 01250590801</p>
+                  </div>
+                  </div>
+                  <div style="background:#f1f5f9; padding:16px 24px; border-radius:12px; margin-bottom:24px; display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-weight:700; color:var(--text-muted); text-transform:uppercase; font-size:0.8rem;">Total Amount</span>
+                    <span class="value" id="bank-total" style="font-weight:900; font-size:1.4rem; color:var(--royal-blue);">USD 0.00</span>
+                  </div>
+                  <div class="form-group">
+                    <label>Transaction Reference <span class="required-star">*</span></label>
+                    <input type="text" id="transactionId" placeholder="Enter Bank Reciept Reference">
+                  </div>
+                  <button class="btn-cta-premium" id="btn-bank-confirm" style="width: 100%;">Confirm Bank Transfer &nbsp;🏦</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="button" id="prevBtn" class="btn-secondary" style="display:none;">← Back</button>
+            <button type="button" id="nextBtn" class="btn-primary">Next Step →</button>
+        </div>
+
+        <!-- SUCCESS SCREEN -->
+        <div id="success-screen" style="display: none; text-align: center;">
+            <div style="font-size: 4rem; margin-bottom: 24px;">✅</div>
+            <h2 style="font-size: 2rem; margin-bottom: 12px;">Registration Submitted</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 32px;">Success! You have registered successfully. An ID has been generated for you.</p>
+            <div class="summary-card" style="text-align: left;">
+              <div class="summary-grid">
+                <div class="summary-item"><span class="summary-label">Reg ID</span><span class="summary-value" id="r-reg-id">—</span></div>
+                <div class="summary-item"><span class="summary-label">Receipt #</span><span class="summary-value" id="r-receipt">—</span></div>
+              </div>
+            </div>
+            <a href="/" class="btn-primary" style="display: inline-block;">Back to Homepage</a>
+        </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer-premium" style="margin-top: 80px;">
+  <div class="container footer-grid" style="text-align: center;">
+      <img src="/images/APB_LOGO.png" alt="APB Logo" class="logo-img" style="height: 40px; margin-bottom: 16px;">
+      <p style="font-size: 0.9rem; color: var(--text-muted);">&copy; 2026 Association of Professional Broadcasters Kenya. Promoting excellence and ethics in broadcasting.</p>
+  </div>
+</footer>
+
+<script src="/js/form.js"></script>
+</body>
+</html>

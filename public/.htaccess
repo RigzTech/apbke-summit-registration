@@ -1,0 +1,14 @@
+Options -MultiViews
+RewriteEngine On
+
+# 1. ALLOW API REQUESTS TO PASS THROUGH TO NODE.JS
+RewriteCond %{REQUEST_URI} ^/api [NC]
+RewriteRule ^ - [L]
+
+# 2. Serve static files directly if they exist
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 3. Fallback only for non-existent pages (SPA routing)
+RewriteRule ^(.*)$ index.html [L,QSA]

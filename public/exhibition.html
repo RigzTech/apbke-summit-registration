@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exhibition Booth Booking | 5th East African Broadcasters Convention</title>
+  <meta name="description" content="Secure your exhibition booth for the 5th East African Broadcasters Convention.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .form-step { display: none; animation: fadeIn 0.4s ease-out; }
+    .form-step.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    
+    .summary-card { background: var(--slate-50); padding: 32px; border-radius: 16px; border: 1px solid var(--border-light); margin-bottom: 32px; }
+    .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .summary-item { display: flex; flex-direction: column; gap: 4px; }
+    .summary-label { font-weight: 700; color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .summary-value { font-weight: 600; color: var(--navy); font-size: 1rem; }
+    
+    .total-summary { border-top: 1px solid var(--border-subtle); margin-top: 24px; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .total-summary .label { font-weight: 800; font-size: 1.1rem; color: var(--navy); }
+    .total-summary .value { font-weight: 900; font-size: 1.6rem; color: var(--royal-blue); }
+
+    .payment-instruction-box { background: #fff; border: 1px solid var(--border-light); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+    .confirmation-input-box { border-top: 1px solid var(--border-subtle); margin-top: 20px; padding-top: 20px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo-text" href="/">
+    <img src="/images/APB_LOGO.png" alt="APB Logo" class="logo-img">
+  </a>
+  <div class="menu-toggle" id="mobile-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/register.html">Register</a></li>
+    <li><a href="/sponsorship.html">Sponsorship</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="https://apbke.org" target="_blank" class="btn-secondary" style="padding: 10px 24px; border: 1px solid var(--royal-blue); color: var(--royal-blue);">Main Website</a></li>
+    <li><a href="/register.html" class="btn-primary" style="padding: 10px 24px;">Get Pass</a></li>
+  </ul>
+</nav>
+
+<main class="form-page">
+  <div class="container">
+    <div style="text-align: center; margin: 60px 0;">
+      <h1 style="font-size: 2.8rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; font-family: 'Outfit', sans-serif;">Exhibition Booth Booking</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem;">Secure your corporate presence at the summit</p>
+    </div>
+
+    <div class="form-card">
+        <div class="stepper">
+          <div class="step-item active" id="step-1">
+            <div class="step-circle">1</div>
+            <span class="step-label">Corporate Info</span>
+          </div>
+          <div class="stepper-line"></div>
+          <div class="step-item" id="step-2">
+            <div class="step-circle">2</div>
+            <span class="step-label">Review</span>
+          </div>
+          <div class="stepper-line"></div>
+          <div class="step-item" id="step-3">
+            <div class="step-circle">3</div>
+            <span class="step-label">Payment</span>
+          </div>
+        </div>
+
+        <!-- STEP 1: Details -->
+        <div class="form-step active" id="form-step-1">
+            <div id="standard-attendance-section" style="margin-bottom: 32px;">
+                <div class="form-section-header">
+                    <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></div>
+                    <h3>1. Booth Selection</h3>
+                </div>
+                <div style="background: var(--slate-50); padding: 24px; border-radius: 12px; border: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: 800; color: var(--navy); font-size: 1.1rem;">Premium Exhibition Booth</div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Includes 2 exhibitor passes</div>
+                    </div>
+                    <div style="font-weight: 900; font-size: 1.4rem; color: var(--royal-blue);">USD 1,000</div>
+                </div>
+            </div>
+
+            <div class="form-section active">
+              <div class="form-section-header">
+                <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                <h3>2. Contact Person & Organization</h3>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label>First Name <span class="required-star">*</span></label><input type="text" id="firstName" required></div>
+                <div class="form-group"><label>Last Name <span class="required-star">*</span></label><input type="text" id="lastName" required></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label>Corporate Email <span class="required-star">*</span></label><input type="email" id="email" required></div>
+                <div class="form-group"><label>Corporate Phone <span class="required-star">*</span></label><input type="tel" id="phone" required></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label>Exhibiting Organization <span class="required-star">*</span></label><input type="text" id="organization" required></div>
+                <div class="form-group"><label>Contact Person Job Title <span class="required-star">*</span></label><input type="text" id="jobTitle" required></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label>Primary Gender <span class="required-star">*</span></label>
+                  <select id="gender" required><option value="">Select</option><option>Male</option><option>Female</option></select>
+                </div>
+                <div class="form-group"><label>Country <span class="required-star">*</span></label>
+                  <select id="countryRes" required>
+                    <option value="">Select</option>
+                    <option>Kenya</option><option>Tanzania</option><option>Uganda</option><option>Rwanda</option><option>Burundi</option><option>South Sudan</option><option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label id="county-label">City / Region <span class="required-star">*</span></label>
+                  <input type="text" id="cityRegion" placeholder="City / State" required>
+                </div>
+                <div class="form-group"><label>Age Range <span class="required-star">*</span></label>
+                  <select id="ageRange" required><option value="">Select</option><option>18-34</option><option>35-50</option><option>50+</option></select>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- STEP 2: Review -->
+        <div class="form-step" id="form-step-2">
+          <div class="form-section-header" style="justify-content: center; margin-bottom: 24px;"><h3>Review Booking Details</h3></div>
+          <div class="summary-card">
+            <div class="summary-grid">
+              <div class="summary-item"><span class="summary-label">Contact Name</span><span class="summary-value" id="v-name">—</span></div>
+              <div class="summary-item"><span class="summary-label">Organization</span><span class="summary-value" id="v-org">—</span></div>
+              <div class="summary-item"><span class="summary-label">Email Address</span><span class="summary-value" id="v-email-val">—</span></div>
+              <div class="summary-item"><span class="summary-label">Location</span><span class="summary-value" id="v-county">—</span></div>
+              <div class="summary-item"><span class="summary-label">Booking Category</span><span class="summary-value">Exhibition Booth</span></div>
+            </div>
+            <div class="total-summary">
+                <span class="label">Total Amount Payable</span>
+                <span class="value">USD 1,000.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: Payment -->
+        <div class="form-step" id="form-step-3">
+            <div class="form-section-header">
+              <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></div>
+              <h3>3. Bank Transfer Details</h3>
+            </div>
+
+            <div id="bank-section">
+                <div class="payment-instruction-box">
+                  <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 20px;">Please transfer the exact amount of <strong>USD 1,000.00</strong> to the account below using your Reference ID.</p>
+                  
+                  <div style="background: var(--slate-50); border: 1px solid var(--border-light); padding: 20px; border-radius: 12px; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.8;">
+                    <div style="display: grid; grid-template-columns: 140px 1fr; gap: 8px;">
+                        <strong>Account Name:</strong> <span>ASSOCIATION OF PROFESSIONAL BROADCASTERS</span>
+                        <strong>Bank Name:</strong> <span>Credit Bank PLC</span>
+                        <strong>Swift Code:</strong> <span>CRBTKENA</span>
+                        <strong>USD Account:</strong> <span>0131016000017</span>
+                        <strong>Reference:</strong> <span id="bank-reference" style="color: var(--royal-blue); font-weight: 800; background: #fff; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border-subtle);">REG-XXXX</span>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Transaction Receipt / Reference <span class="required-star">*</span></label>
+                    <input type="text" id="transactionId" placeholder="Enter Reference Code">
+                  </div>
+                  <button class="btn-cta-premium" id="btn-bank-confirm" style="width: 100%;">Confirm Booking &nbsp;🏦</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="button" id="prevBtn" class="btn-secondary" style="display:none;">← Back</button>
+            <button type="button" id="nextBtn" class="btn-primary">Next Step →</button>
+        </div>
+
+        <!-- SUCCESS SCREEN -->
+        <div id="success-screen" style="display: none; text-align: center;">
+            <div style="font-size: 4rem; margin-bottom: 24px;">✅</div>
+            <h2 style="font-size: 2rem; margin-bottom: 12px;">Booking Requested</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 32px;">Success! Your exhibition booth request has been submitted. A confirmation will be sent after verification.</p>
+            <div class="summary-card" style="text-align: left;">
+              <div class="summary-grid">
+                <div class="summary-item"><span class="summary-label">Reg ID</span><span class="summary-value" id="r-reg-id">—</span></div>
+                <div class="summary-item"><span class="summary-label">Amount</span><span class="summary-value">USD 1,000.00</span></div>
+              </div>
+            </div>
+            <a href="/" class="btn-primary" style="display: inline-block;">Back to Homepage</a>
+        </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer-premium" style="margin-top: 80px;">
+  <div class="container footer-grid" style="text-align: center;">
+      <img src="/images/APB_LOGO.png" alt="APB Logo" class="logo-img" style="height: 40px; margin-bottom: 16px;">
+      <p style="font-size: 0.9rem; color: var(--text-muted);">&copy; 2026 Association of Professional Broadcasters Kenya. Promoting excellence and ethics in broadcasting.</p>
+  </div>
+</footer>
+
+<script src="/js/exhibition.js"></script>
+</body>
+</html>
